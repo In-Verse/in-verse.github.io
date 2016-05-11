@@ -8,10 +8,10 @@ layout: feed
 	<link href="http:/in-verse.github.io/blog/atom.xml" rel="self"/>
 	<link href="http://in-verse.github.io/blog"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://hankquinlan.github.io/blog</id>
+	<id>http://in-verse.github.io/blog</id>
 	<author>
 		<name>Rosemary</name>
-		<email>rosemaryhdavies@msn.com</email>
+		<email>whyareyoureadingthis@gmail.com</email>
 	</author>
 
 	{% for post in site.posts %}
