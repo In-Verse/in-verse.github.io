@@ -1,4 +1,3 @@
-# in-verse.github.io
 ## Welcome to the README!
 
 This is my GitHub pages website.
