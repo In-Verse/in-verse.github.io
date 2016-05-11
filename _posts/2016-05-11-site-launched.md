@@ -3,7 +3,6 @@ layout: post
 title: "Launch of Site"
 date: 2016-05-11
 ---
-<body id="top">
 <br>
 Hello world!
 
@@ -13,5 +12,3 @@ Already great things are (1) the ease of use, (2) integration of Git, and (3) th
 
 I'm still getting used to writing in Markdown. I've been using this ["cheat sheet"](http://packetlife.net/media/library/16/Markdown.pdf)
 <br>
-<a href="#top">Back to top</a>
-</body>
