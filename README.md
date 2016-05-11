@@ -6,6 +6,7 @@ It is still very much a WIP.
 
 Goals:
 
+- Write HTML and CSS (later incorporate JavaScript)
 - Host and publish a website through GitHub:
   - Homepage
   - About, Resume, Blog pages
