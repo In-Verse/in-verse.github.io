@@ -4,13 +4,7 @@ title: "Square Matrix"
 date: 2016-05-12
 ---
 <br>
-| I | often | wondered | when | I | cursed |
-|----|-------------|--------|-------|-----|
-| Often  | feared | where | I  | would  | be |
-| Wondered  | where | she'd | yield | her | love |
-| When  | I  | yield | so  | will  | she |
-| I | would | her | will | be | pitied |
-| Cursed | be | love | she | pitied | me |
+![SquareMatrix]({{ https://in-verse.github.io/blog/2016/05/12/squarematrix }}/assets/s_squarematrix.jpg)
 <br>
 Charles Dodgson wrote this poem. He is better known as Lewis Carroll for writing <em>Alice and Wonderland</em> and <em>Through the Looking Glass</em>. Dodgson was also a mathematician who pioneered how to find the determinant of a square matrix; essentially, he found whether a solution to a system of linear equations existed.
 <br>
