@@ -4,7 +4,7 @@ title: "Square Matrix"
 date: 2016-05-12
 ---
 <br>
-![SquareMatrix]({{ https://in-verse.github.io/blog/2016/05/12/squarematrix }}/assets/s_squarematrix.jpg)
+![SquareMatrix]({{ https://in-verse.github.io/blog/2016/05/12/squarematrix }}/images/s_squarematrix.jpg)
 <br>
 Charles Dodgson wrote this poem. He is better known as Lewis Carroll for writing <em>Alice and Wonderland</em> and <em>Through the Looking Glass</em>. Dodgson was also a mathematician who pioneered how to find the determinant of a square matrix; essentially, he found whether a solution to a system of linear equations existed.
 <br>
