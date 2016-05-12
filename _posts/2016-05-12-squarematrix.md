@@ -12,12 +12,8 @@ Charles Dodgson wrote this poem. He is better known as Lewis Carroll for writing
 Notice that this poem fits in a 6x6 table. It’s a square. Also, notice that the poem can be read both horizontally (through the rows) and vertically (through the columns). For example, see the <strong>bolded text</strong> above. 
 <br>
 <br>
-Personally, this is fascinating if you use linear algebra to consider the poem as a matrix. So, then you can see that a12 = a21; in this case, "often" = "often".
-<br>
-<br>
-When the columns and the rows of a matrix are interchanged, then we get the transpose of that matrix. In this case, A= AT.
-By a further set of proofs (A-1AT = I),  we can see that our matrix A is invertible. Yes, linear algebra deals with numbers (integers, floats). However, Dodgson shows that you can also look at words (strings)!
+Personally, this is fascinating if you use linear algebra to consider the poem as a matrix. So, then you can see that a12 = a21; in this case, "often" = "often". When the columns and the rows of a matrix are interchanged, then we get the transpose of that matrix. In this case, A= AT. By a further set of proofs (A-1AT = I),  we can see that our matrix A is invertible. Yes, linear algebra deals with numbers (integers, floats). However, Dodgson shows that you can also look at words (strings)!
 <br>
 <hr />
-> Contrariwise, if it was so, it might be; and if it were so, it would be; but as it isn't, it ain't. That's logic. - Lewis Carroll
+> Contrariwise, if it was so, it might be; and if it were so, it would be; but as it isn't, it ain't. That's logic. - Tweedledee
 
