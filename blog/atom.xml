@@ -11,7 +11,7 @@ layout: feed
 	<id>http://in-verse.github.io/blog</id>
 	<author>
 		<name>Rosemary</name>
-		<email>whyareyoureadingthis@gmail.com</email>
+		<email>rosemaryhdavies@msn.com</email>
 	</author>
 
 	{% for post in site.posts %}
