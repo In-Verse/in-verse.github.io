@@ -2,7 +2,7 @@
 
 This is my GitHub pages website. 
 
-It is still very much a WIP that was started in thanks to Jonathan McGlone's guide (http://jmcglone.com/guides/github-pages/).
+It is still very much a WIP that was started in thanks to Jonathan McGlone's [guide](http://jmcglone.com/guides/github-pages/).
 
 Goals:
 
