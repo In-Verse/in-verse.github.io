@@ -3,8 +3,6 @@ layout: post
 title: "Files Full Of Whitespace"
 date: 2018-03-22
 ---
-<br>
-<br>
 <p>
 I was working in Sysops when I encountered a frustrating problem. I was making a Windows Virtual Machine as a "test box" on my Archlinux work computer. I downloaded the Windows ISO from our network share. However, try as I might, I couldn't get VMbox to recognize the ISO as a <em>valid</em> option. 
 <br>
