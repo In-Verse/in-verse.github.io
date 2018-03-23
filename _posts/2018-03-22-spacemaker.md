@@ -23,8 +23,6 @@ However, as of current, the Mongolian Vowel Separator is not classified as white
 <br>
 Here is a basic implementation with the classic space. Note that you can replace it with the Unicode equivalent as long as you escape it with a `\`.
 </p>
-<br>
-<br>
 <pre class="prettyprint"><code class="language-no-highlight">
 function makespace(){
   for i in {1..255}
@@ -34,8 +32,6 @@ function makespace(){
     done
     space=''
 }</code></pre>
-<br>
-<br>
 It's that simple. 
 <br>
 <br>
@@ -47,17 +43,12 @@ Note that the loop goes to 255 because the max filelength of a file in a directo
 <p>
 The program can write spaces to one directory. But, you can extend it to write to all possible directories if you look for `find`able directories. Put the result in a list that the program can while loop over. Now, you can write to directories on the server that you have permission to.
 </p>
-<br>
-<br>
 <pre class="prettyprint"><code class="language-no-highlight">
 find /home/ -type d \( -perm -o+w \) 2>/dev/null > ~/list.txt
 </code></pre>
-<br>
-<br>
 <p>
 Create a distinct timestamp for each file. Note that you need to check month, day, hour, and minute values if its less than 10 because you need to append a 0; it's just how the command `touch` takes timestamps. 
 </p>
-<br>
 <pre class="prettyprint"><code class="language-no-highlight">
 function timestamp(){
   stamp=''
@@ -68,8 +59,6 @@ function timestamp(){
   ...
 }
 </code></pre>
-<br>
-<br>
 <p>
 Make variable size of each file made of space with `fortune`. Why? Because directing the output of fortune in a file will mean that it will be harder for users to delete files based on a fixed-or-empty size value. 
 <br>
@@ -82,12 +71,10 @@ Make a cronjob so that your program will relentlessly create spaces on a schedul
 <pre class="prettyprint"><code class="language-no-highlight">
 0 1 * * * /home/username/SpaceMaker.sh
 </code></pre>
-
 <h4>Why would you ever need files full of just whitespace?</h4>
 <p>
 I'll be honest, creating directories of whitespace is not practical. However, it's great to imagine. Having files full of whitespace means that you're going to start to be creative. If *all* the files are full of whitespace and you're looking for a secret/flag, what are you going to do? When you do a basic `ls`, the output will be, well, nothing. You can't rely on filenames. And, you don't want to `less` or `cat` through 255 files. This might force you to use regular expressions and `grep`.
 </p>
-
 <p>References:</p>
 <ul>
   <li><a href="https://codeblog.jonskeet.uk/2014/12/01/when-is-an-identifier-not-an-identifier-attack-of-the-mongolian-vowel-separator/">Attack of the Mongolian File Separator</a></li>
