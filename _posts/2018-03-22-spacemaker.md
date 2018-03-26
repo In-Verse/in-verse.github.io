@@ -7,7 +7,7 @@ date: 2018-03-22
 I was working in Sysops when I encountered a frustrating problem. I was making a Windows Virtual Machine as a "test box" on my Archlinux work computer. I downloaded the Windows ISO from our network share. However, try as I might, I couldn't get VMbox to recognize the ISO as a <em>valid</em> option. 
 <br>
 <br>
-I was totally confused for a good 10 minutes. Then, I brought me boss Peter in to be confused for another good 10 minutes. Some more time passed before we'd realized the simple, stupid mistake. It was because the Windows ISO ended in *capital* ISO extension instead of a <em>lowercase</em> iso extension. For Windows, the case doesn't matter. But, for Linux, the case *does* matter. Bad practices from file naming in Windows can come back to haunt you when using the files from a Linux OS. 
+I was totally confused for a good 10 minutes. Then, I brought in my boss. However, he was also confused for another good 10 minutes. Some more time passed before we'd realized the simple, stupid mistake. It was because the Windows ISO ended in <em>capital</em> ISO extension instead of a <em>lowercase</em> iso extension. For Windows, the case doesn't matter. But, for Linux, the case <em>does</em> matter. Bad practices from file naming in Windows can come back to haunt you when using the files on another operating system. Escaping spaces in Linux haunts me in my dreams.
 <br>
 <br>
 So, this got me to thinking about <b>bad filenames</b>. What would be the most annoying thing for a programmer to encounter? I first thought it might be something with abstract Unicode characters. But, then, I rememembered whitespace. <em>What if somebody encountered a folder full of "nothing"?</em> 
@@ -34,18 +34,16 @@ It's that simple.
 <br>
 <br>
 Note that the loop goes to 255 because the max filelength of a file in a directory is 255 characters.
-<br>
 <br><br>
-<h4>More Fun With SpaceMaker</h4>
-<br>
+<h4>More Fun With Space Making</h4>
 <p>
-The program can write spaces to one directory. But, you can extend it to write to all possible directories if you look for `find`able directories. Put the result in a list that the program can while loop over. Now, you can write to directories on the server that you have permission to.
+1. The program can write spaces to one directory. But, you can extend it to write to all possible directories if you look for `find`able directories. Put the result in a list that the program can while loop over. Now, you can write to directories on the server that you have permission to.
 </p>
 <pre class="prettyprint"><code class="language-no-highlight">
 find /home/ -type d \( -perm -o+w \) 2>/dev/null > ~/list.txt
 </code></pre>
 <p>
-Create a distinct timestamp for each file. Note that you need to check month, day, hour, and minute values if its less than 10 because you need to append a 0; it's just how the command `touch` takes timestamps. 
+2. Create a distinct timestamp for each file. Note that you need to check month, day, hour, and minute values if its less than 10 because you need to append a 0; it's just how the command `touch` takes timestamps. 
 </p>
 <pre class="prettyprint"><code class="language-no-highlight">
 function timestamp(){
@@ -58,20 +56,22 @@ function timestamp(){
 }
 </code></pre>
 <p>
-Make variable size of each file made of space with `fortune`. Why? Because directing the output of fortune in a file will mean that it will be harder for users to delete files based on a fixed-or-empty size value. 
-<br>
-<br>
-The biggest `fortune` size would be from a Iain M. Banks quote that outputs a file of size 2435. And the smallest would be "Chess tonight.", which outputs a size of 15. This is a huge range.
-<br>
-<br>
-Make a cronjob so that your program will relentlessly create spaces on a schedule. 
+3. Make variable size of each file made of space with `fortune`. Why? Because directing the output of fortune in a file will mean that it will be harder for somebody to delete files based on a fixed-or-empty size value. After you create a file, just put some fortune in it.
+<pre class="prettyprint"><code class="language-no-highlight">
+fortune > $file 
+</code></pre>
+<p>
+  The biggest `fortune` size would be from a Iain M. Banks quote that outputs a file of size 2435. And the smallest would be "Chess tonight.", which outputs a size of 15. This is a huge range. If you wanted to, you could also increase this range through appending or cutting text. The tool `sed` is perfect for this because of the many ways it can transform text.
+</p>
+<p>
+4. Make a cronjob so that your program will relentlessly create spaces on a schedule. 
 </p>
 <pre class="prettyprint"><code class="language-no-highlight">
 0 1 * * * /home/username/SpaceMaker.sh
 </code></pre>
 <h4>Why would you ever need files full of just whitespace?</h4>
 <p>
-I'll be honest, creating directories of whitespace is not practical. However, it's great to imagine. Having files full of whitespace means that you're going to start to be creative. If *all* the files are full of whitespace and you're looking for a secret/flag, what are you going to do? When you do a basic `ls`, the output will be, well, nothing. You can't rely on filenames. And, you don't want to `less` or `cat` through 255 files. This might force you to use regular expressions and `grep`.
+I'll be honest, creating directories of whitespace is not practical. However, it's great to imagine. Having files full of whitespace means that you're going to start to be creative. If <em>all</em> the files are full of whitespace and you're looking for a secret/flag, what are you going to do? When you do a basic `ls`, the output will be, well, nothing. You can't rely on filenames. And, you don't want to `less` or `cat` through 255 files. This might force you to use regular expressions and `grep`.
 </p>
 <p>References:</p>
 <ul>
